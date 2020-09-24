@@ -1,0 +1,13 @@
+
+<div class="content">
+  <div *ngFor="let pokemon of pokemonData; let i=index">
+    <!-- {{i+1}}.- {{ pokemon.name }} -->
+    <div>
+      <img
+        alt=""
+        [src]="pokemon.image"
+      />
+      <div class="d-flex justify-content-center">{{ pokemon.name }}</div>
+    </div>
+  </div>
+</div>
