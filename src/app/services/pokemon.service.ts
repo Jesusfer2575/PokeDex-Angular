@@ -13,7 +13,6 @@ export class PokemonService {
   ) { }
 
   getPokemons() {
-
     const url = `${this.url}?limit=151`;
     return this.http.get(url, {
       headers: this.headers
