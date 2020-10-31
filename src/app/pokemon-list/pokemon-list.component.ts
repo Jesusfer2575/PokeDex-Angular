@@ -45,4 +45,8 @@ export class PokemonListComponent {
       console.log(this.singlePokemons);
     }
   }
+
+  deletePokemon(name: string) {
+    this.singlePokemons = this.singlePokemons.filter(poke => poke.name !== name);
+  }
 }

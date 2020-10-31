@@ -4,7 +4,7 @@
   </button>
   <ng-container>
     <div *ngFor="let pokemon of singlePokemons; let i=index">
-      <pokemon [data]="pokemon"></pokemon>
+      <pokemon (delete)="deletePokemon($event)" [data]="pokemon"></pokemon>
     </div>
   </ng-container>
 </div>
