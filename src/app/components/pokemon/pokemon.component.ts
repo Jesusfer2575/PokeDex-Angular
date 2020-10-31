@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, Host } from '@angular/core';
-import { ResponseSinglePokemon } from '../interfaces/pokemon';
-import { PokemonListComponent } from '../pokemon-list/pokemon-list.component';
+import { ResponseSinglePokemon } from '@interfaces/pokemon';
+import { PokemonListComponent } from '@components/pokemon-list/pokemon-list.component';
 
 @Component({
   selector: 'pokemon',

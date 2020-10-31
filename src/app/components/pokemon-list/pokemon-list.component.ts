@@ -1,6 +1,6 @@
-import { PokeAPIService } from './../services/pokeapi.service';
+import { PokeAPIService } from '@services/pokeapi.service';
 import { Component } from '@angular/core';
-import { Response, Pokemon, ResponseSinglePokemon } from '../interfaces/pokemon';
+import { Response, Pokemon, ResponseSinglePokemon } from '@interfaces/pokemon';
 
 @Component({
   selector: 'pokemon-list',
