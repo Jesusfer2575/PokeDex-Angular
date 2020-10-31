@@ -1,29 +1,10 @@
 <div class="content">
-  <button (click)="getPokemonsInfo()">
+  <button *ngIf="singlePokemons.length === 0" (click)="getPokemonsInfo()">
     Load
   </button>
-  <ng-container *ngIf="singlePokemons.length != 0">
+  <ng-container>
     <div *ngFor="let pokemon of singlePokemons; let i=index">
-      <div [id]="pokemon.name">
-        <img
-          alt=""
-          [src]="pokemon.sprites.front_default"
-        />
-        <div class="d-flex justify-content-center">
-          {{ pokemon.name }}
-        </div>
-      </div>
+      <pokemon [data]="pokemon"></pokemon>
     </div>
   </ng-container>
-  <!-- <div *ngFor="let pokemon of pokemonData; let i=index">
-    <div (mouseover)="showAlert(pokemon.name)" [id]="pokemon.name">
-      <img
-        alt=""
-        [src]="pokemon.image"
-      />
-      <div class="d-flex justify-content-center">
-        {{ pokemon.name }}
-      </div>
-    </div>
-  </div> -->
 </div>

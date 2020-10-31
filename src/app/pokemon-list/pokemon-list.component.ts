@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { Response, Pokemon, ResponseSinglePokemon } from '../interfaces/pokemon';
 
 @Component({
-  selector: 'app-pokemon-list',
+  selector: 'pokemon-list',
   templateUrl: './pokemon-list.component.html',
   styleUrls: ['./pokemon-list.component.css']
 })
@@ -33,17 +33,16 @@ export class PokemonListComponent {
     // getPokemons();
   }
 
-  showAlert(pokemonName) {
-    console.log(pokemonName);
-  }
-
   getPokemonsInfo() {
-    this.pokemons && this.pokemons.map((item: Pokemon) => {
-      const { url } = item;
-      this.apiService.getPokemon(url).subscribe(async (response: ResponseSinglePokemon) => {
-        this.singlePokemons.push(response);
+    if (this.pokemons.length !== 0) {
+      this.pokemons.map(async (item: Pokemon) => {
+        const { url } = item;
+        this.apiService.getPokemon(url).subscribe(async (response: ResponseSinglePokemon) => {
+          this.singlePokemons.push(response);
+        });
       });
-    });
-    console.log(this.singlePokemons);
+
+      console.log(this.singlePokemons);
+    }
   }
 }
