@@ -1,10 +1,6 @@
 <div class="content">
   <button *ngIf="singlePokemons.length === 0" (click)="getPokemonsInfo()">
-    Load
+    Load Pokemon
   </button>
-  <ng-container>
-    <div *ngFor="let pokemon of singlePokemons; let i=index">
-      <pokemon (delete)="deletePokemon($event)" [data]="pokemon"></pokemon>
-    </div>
-  </ng-container>
+  <pokemon *ngFor="let pokemon of singlePokemons" (delete)="deletePokemon($event)" [data]="pokemon"></pokemon>
 </div>

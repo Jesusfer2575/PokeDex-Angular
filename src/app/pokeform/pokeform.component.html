@@ -1,0 +1,19 @@
+<div class="content">
+  <h1>This is a test of a Form</h1>
+
+  <form [formGroup]="pokeForm" (ngSubmit)="sendRequest(pokeForm.value)">
+    <label>Name: </label>
+    <input formControlName="name" type="text" />
+    <br />
+
+    <label>Email: </label>
+    <input formControlName="email" type="email" />
+    <br />
+
+    <label>Password: </label>
+    <input formControlName="password" type="password" />
+    <br />
+
+    <button type="submit" [disabled]="pokeForm.invalid">Send</button>
+  </form>
+</div>

@@ -13,7 +13,7 @@ export class PokemonListComponent {
   singlePokemons: ResponseSinglePokemon[] = [];
 
   constructor(private apiService: PokeAPIService) {
-    apiService.getPokemons('?limit=10').subscribe(async (response: Response) => {
+    apiService.getPokemons('?limit=5&offset=200').subscribe(async (response: Response) => {
       const { results } = response;
       console.log(results);
       this.pokemons = [...results];
