@@ -31,9 +31,6 @@ export class PokemonListComponent {
     //   }));
     // }
     // getPokemons();
-    // pokemon.getPokemons().subscribe(async (res: IResponse) => {
-    //   const { results } = res;
-    // });
   }
 
   showAlert(pokemonName) {
