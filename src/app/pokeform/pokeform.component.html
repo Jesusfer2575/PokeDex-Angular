@@ -8,6 +8,9 @@
 
     <label>Email: </label>
     <input formControlName="email" type="email" />
+    <div *ngIf="(pokeForm.get('email').hasError('required') ||
+      pokeForm.get('email').hasError('email')) &&
+      pokeForm.get('email').touched">Error al ingresar el email</div>
     <br />
 
     <label>Password: </label>
