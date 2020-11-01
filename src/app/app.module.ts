@@ -9,6 +9,7 @@ import { TitleComponent } from '@components/title/title.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PokemonComponent } from '@components/pokemon/pokemon.component';
 import { PokeformComponent } from '@components/pokeform/pokeform.component';
+import { PokemonSearchComponent } from './components/pokemon-search/pokemon-search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PokeformComponent } from '@components/pokeform/pokeform.component';
     PokemonListComponent,
     TitleComponent,
     PokemonComponent,
-    PokeformComponent
+    PokeformComponent,
+    PokemonSearchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,15 @@
 <div class="content">
-  <button *ngIf="singlePokemons.length === 0" (click)="getPokemonsInfo()">
+  <pokemon-search (nameChange)="findPokemon($event)"></pokemon-search>
+</div>
+<div class="content">
+  <button *ngIf="singlePokemons.length === 0" (click)="getPokemonsInfo()" class="btn btn-outline-success">
     Load Pokemon
   </button>
-  <pokemon *ngFor="let pokemon of singlePokemons" (delete)="deletePokemon($event)" [data]="pokemon"></pokemon>
+  <pokemon *ngFor="let pokemon of singlePokemons" 
+    (delete)="deletePokemon($event)" 
+    [data]="pokemon">
+  </pokemon>
+  <div *ngIf="errorMessageNotFound" class="alert alert-danger" role="alert">
+    Pokemon not found!
+  </div>
 </div>
