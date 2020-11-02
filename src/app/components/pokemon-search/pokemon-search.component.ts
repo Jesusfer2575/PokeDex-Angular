@@ -7,10 +7,15 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class PokemonSearchComponent {
   name: string = '';
+  @Output() nameClick = new EventEmitter();
   @Output() nameChange = new EventEmitter();
   constructor() { }
 
   handleClick() {
-    this.nameChange.emit(this.name);
+    this.nameClick.emit(this.name);
+  }
+
+  onKeyUp(event) {
+    this.nameChange.emit(event.target.value);
   }
 }

@@ -51,6 +51,12 @@ export class PokemonListComponent {
     this.singlePokemons = this.singlePokemons.filter(poke => poke.name !== name);
   }
 
+  filterPokemon(name: string) {
+    if (this.singlePokemons.length !== 0) {
+      this.singlePokemons = this.singlePokemons.filter(poke => poke.name.trim().toLowerCase().includes(name.trim().toLowerCase()));
+    }
+  }
+
   findPokemon(name: string) {
     const isPokemonInCollection = this.singlePokemons.find(poke => poke.name === name.toLowerCase());
     

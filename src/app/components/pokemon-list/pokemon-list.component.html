@@ -1,5 +1,5 @@
 <div class="content">
-  <pokemon-search (nameChange)="findPokemon($event)"></pokemon-search>
+  <pokemon-search (nameClick)="findPokemon($event)" (nameChange)="filterPokemon($event)"></pokemon-search>
 </div>
 <div class="content">
   <button *ngIf="singlePokemons.length === 0" (click)="getPokemonsInfo()" class="btn btn-outline-success">
