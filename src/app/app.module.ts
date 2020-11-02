@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PokemonComponent } from '@components/pokemon/pokemon.component';
 import { PokeformComponent } from '@components/pokeform/pokeform.component';
 import { PokemonSearchComponent } from './components/pokemon-search/pokemon-search.component';
+import { TestDirective } from './directives/test-directive.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PokemonSearchComponent } from './components/pokemon-search/pokemon-sear
     TitleComponent,
     PokemonComponent,
     PokeformComponent,
-    PokemonSearchComponent
+    PokemonSearchComponent,
+    TestDirective
   ],
   imports: [
     BrowserModule,
