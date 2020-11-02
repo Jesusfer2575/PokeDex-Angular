@@ -30,6 +30,6 @@ export class TestDirective {
 
   changeSprite(sprite: string) {
     this.renderer.setAttribute(this.el.nativeElement, 'src', sprite);
-    console.log(sprite); 
+    // console.log(sprite); 
   }
 }

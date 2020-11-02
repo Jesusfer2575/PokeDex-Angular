@@ -43,7 +43,7 @@ export class PokemonListComponent {
         });
       }));
 
-      console.log(this.singlePokemons);
+      // console.log(this.singlePokemons);
     }
   }
 
