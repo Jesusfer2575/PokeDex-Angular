@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input, Renderer2, HostListener } from '@angular/core';
-import { ResponseSinglePokemon } from './../interfaces/pokemon';
+import { Images } from './../interfaces/pokemon';
 
 @Directive({
   selector: '[TestDirective]'
@@ -7,15 +7,15 @@ import { ResponseSinglePokemon } from './../interfaces/pokemon';
 export class TestDirective {
 
   // @Input() TestDirective: boolean;
-  @Input('imageInput') imageInput: ResponseSinglePokemon;
+  @Input('imageInput') imageInput: Images;
   @HostListener('mouseenter') onMouseEnter() {
-    const { sprites } = this.imageInput;
-    this.changeSprite(sprites.front_shiny);
+    const { front_shiny } = this.imageInput;
+    this.changeSprite(front_shiny);
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    const { sprites } = this.imageInput;
-    this.changeSprite(sprites.front_default);
+    const { front_default } = this.imageInput;
+    this.changeSprite(front_default);
   }
 
   constructor(

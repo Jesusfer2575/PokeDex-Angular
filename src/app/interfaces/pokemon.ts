@@ -1,4 +1,8 @@
-
+export interface Images {
+  front_default: string;
+  back_default: string;
+  front_shiny: string;
+}
 export interface ResponseSinglePokemon {
   id: number;
   name: string;
@@ -6,11 +10,7 @@ export interface ResponseSinglePokemon {
   weight: number;
   base_experience: number;
   order: number;
-  sprites: {
-    front_default: string;
-    back_default: string;
-    front_shiny: string;
-  }
+  sprites: Images;
   location_area_encounters: string;
 }
 
