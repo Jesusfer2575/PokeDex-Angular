@@ -9,8 +9,14 @@ import { TitleComponent } from '@components/title/title.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PokemonComponent } from '@components/pokemon/pokemon.component';
 import { PokeformComponent } from '@components/pokeform/pokeform.component';
-import { PokemonSearchComponent } from './components/pokemon-search/pokemon-search.component';
-import { TestDirective } from './directives/test-directive.directive';
+import { PokemonSearchComponent } from '@components/pokemon-search/pokemon-search.component';
+import { TestDirective } from '@directives/test-directive.directive';
+import { SubjectComponent } from '@components/subject/subject.component';
+
+import { HomeComponent } from '@pages/home/home.component';
+
+import { RouteModule } from '@routes/route.module';
+import { SubpageComponent } from './pages/subpage/subpage.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +26,18 @@ import { TestDirective } from './directives/test-directive.directive';
     PokemonComponent,
     PokeformComponent,
     PokemonSearchComponent,
-    TestDirective
+    TestDirective,
+    SubjectComponent,
+    HomeComponent,
+    SubpageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

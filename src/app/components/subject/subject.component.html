@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center">
+  <div>
+    <button (click)="next()" class="btn btn-primary">Next Subject</button>
+    <button (click)="complete()" class="btn btn-success">Complete Subject</button>
+  </div>
+  <div>
+    <h2>
+      Age property:
+      <span class="badge badge-secondary">{{ age }}</span>
+    </h2>
+  </div>
+  <div>
+    <h2>
+      Subject property: 
+      <span class="badge badge-secondary">{{ ageSubject$ | async }}</span>
+    </h2>
+  </div>
+  
+</div>
