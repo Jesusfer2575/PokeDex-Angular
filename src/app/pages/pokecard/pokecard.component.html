@@ -1,0 +1,21 @@
+
+<div class="d-flex justify-content-center">
+  <div class="card" style="width: 18rem;">
+    <img 
+      [src]="pokemon.sprites.front_default" 
+      class="card-img-top" 
+      alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ pokemon.name }}</h5>
+      <p class="card-text">
+        <b>weight:</b> {{ pokemon.weight }}
+        <b>height:</b> {{ pokemon.height }}
+      </p>
+      <p class="card-text">
+        <b>order:</b> {{ pokemon.order }}
+        <b>base experience:</b> {{ pokemon.base_experience }}
+      </p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+</div>

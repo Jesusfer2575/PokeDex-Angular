@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from '@pages/home/home.component';
 import { SubpageComponent } from '@pages/subpage/subpage.component';
+import { PokecardComponent } from '@pages/pokecard/pokecard.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'subpage',
     component: SubpageComponent,
+  },
+  {
+    path: 'pokemon/:name',
+    component: PokecardComponent,
   }
 ]
 

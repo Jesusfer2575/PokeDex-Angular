@@ -1,10 +1,12 @@
 <div [id]="pokemon.id">
-  <img
-    alt=""
-    [src]="pokemon.sprites.front_default"
-    TestDirective
-    [imageInput]="pokemon.sprites"
-  />
+  <a href="#" [routerLink]="['/pokemon', pokemon.name]">
+    <img
+      alt=""
+      [src]="pokemon.sprites.front_default"
+      TestDirective
+      [imageInput]="pokemon.sprites"
+    />
+  </a>
   <div class="d-flex justify-content-center">
     <p>{{ pokemon.name }}</p>
     <br />

@@ -17,6 +17,7 @@ import { HomeComponent } from '@pages/home/home.component';
 
 import { RouteModule } from '@routes/route.module';
 import { SubpageComponent } from './pages/subpage/subpage.component';
+import { PokecardComponent } from './pages/pokecard/pokecard.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SubpageComponent } from './pages/subpage/subpage.component';
     TestDirective,
     SubjectComponent,
     HomeComponent,
-    SubpageComponent
+    SubpageComponent,
+    PokecardComponent
   ],
   imports: [
     BrowserModule,
