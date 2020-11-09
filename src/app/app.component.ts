@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { appState } from './store/app.reducer';
 
 @Component({
   selector: 'app-root',

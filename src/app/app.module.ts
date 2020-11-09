@@ -18,6 +18,10 @@ import { HomeComponent } from '@pages/home/home.component';
 import { RouteModule } from '@routes/route.module';
 import { SubpageComponent } from './pages/subpage/subpage.component';
 import { PokecardComponent } from './pages/pokecard/pokecard.component';
+import { StoreModule } from '@ngrx/store';
+
+import { reducer } from './store/app.reducer';
+import { PokeReduxComponent } from './components/poke-redux/poke-redux.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { PokecardComponent } from './pages/pokecard/pokecard.component';
     SubjectComponent,
     HomeComponent,
     SubpageComponent,
-    PokecardComponent
+    PokecardComponent,
+    PokeReduxComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,10 @@ import { PokecardComponent } from './pages/pokecard/pokecard.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouteModule
+    RouteModule,
+    StoreModule.forRoot({
+      language: reducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
