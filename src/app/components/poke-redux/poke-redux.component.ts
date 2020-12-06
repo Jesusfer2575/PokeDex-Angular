@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { appState } from 'src/app/store/app.reducer';
+import { appState, TYPES } from 'src/app/store/app.reducer';
 
 @Component({
   selector: 'app-poke-redux',
@@ -13,7 +13,7 @@ export class PokeReduxComponent implements OnInit {
 
   constructor(private store: Store<appState>) { 
     // The param passed as string is the name of the property from the state of the store
-    this.data$ = store.select('language');
+    this.data$ = store.select('title');
   }
 
   ngOnInit(): void {
@@ -21,13 +21,13 @@ export class PokeReduxComponent implements OnInit {
 
   changeSpanish() {
     this.store.dispatch({
-      type: 'CHANGE_SPANISH',
+      type: TYPES.SPANISH,
     });
   }
 
   changeEnglish() {
     this.store.dispatch({
-      type: 'CHANGE_ENGLISH',
+      type: TYPES.ENGLISH,
     });
   }
 }

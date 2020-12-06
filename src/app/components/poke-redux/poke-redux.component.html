@@ -5,7 +5,7 @@
       <button type="button" class="btn btn-success" (click)="changeEnglish()">Change to English</button>
     </div>
     <div class="card-body">
-      Something
+      {{ (data$ | async)?.title }}
     </div>
   </div>
 </div>

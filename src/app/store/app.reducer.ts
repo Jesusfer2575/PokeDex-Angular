@@ -1,13 +1,33 @@
 import { Action } from '@ngrx/store';
 
+export const TYPES = {
+  SPANISH: 'SPANISH',
+  ENGLISH: 'ENGLISH',
+}
+
 export interface appState {
-  language: string;
+  title: string;
+  language?: string;
 }
 
 export const initialState = {
-  language: 'Spanish'
+  title: 'Pokedex Redux Angular'
 }
 
 export function reducer(state: appState = initialState, action: Action) { 
   console.log(action);
+  switch(action.type) {
+    case TYPES.SPANISH:
+      return {
+        ...state,
+        title: 'spanish'
+      }
+    case TYPES.ENGLISH:
+      return {
+        ...state,
+        title: 'english'
+      }
+    default:
+      return state;
+  }
 }

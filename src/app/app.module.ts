@@ -19,6 +19,7 @@ import { RouteModule } from '@routes/route.module';
 import { SubpageComponent } from './pages/subpage/subpage.component';
 import { PokecardComponent } from './pages/pokecard/pokecard.component';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { reducer } from './store/app.reducer';
 import { PokeReduxComponent } from './components/poke-redux/poke-redux.component';
@@ -46,7 +47,10 @@ import { PokeReduxComponent } from './components/poke-redux/poke-redux.component
     ReactiveFormsModule,
     RouteModule,
     StoreModule.forRoot({
-      language: reducer
+      title: reducer
+    }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 4
     })
   ],
   providers: [],
