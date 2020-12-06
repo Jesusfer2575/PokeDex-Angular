@@ -21,8 +21,9 @@ import { PokecardComponent } from './pages/pokecard/pokecard.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { reducer } from './store/app.reducer';
-import { PokeReduxComponent } from './components/poke-redux/poke-redux.component';
+import { reducer } from './reducers/pokemong.reducer';
+import { ReadComponent } from './components/read/read.component';
+import { CreateComponent } from './components/create/create.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PokeReduxComponent } from './components/poke-redux/poke-redux.component
     HomeComponent,
     SubpageComponent,
     PokecardComponent,
-    PokeReduxComponent
+    ReadComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -47,10 +49,10 @@ import { PokeReduxComponent } from './components/poke-redux/poke-redux.component
     ReactiveFormsModule,
     RouteModule,
     StoreModule.forRoot({
-      title: reducer
+      pokemong: reducer
     }),
     StoreDevtoolsModule.instrument({
-      maxAge: 4
+      maxAge: 10
     })
   ],
   providers: [],

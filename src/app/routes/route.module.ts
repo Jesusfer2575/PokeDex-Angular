@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '@pages/home/home.component';
 import { SubpageComponent } from '@pages/subpage/subpage.component';
 import { PokecardComponent } from '@pages/pokecard/pokecard.component';
-import { PokeReduxComponent } from '@components/poke-redux/poke-redux.component';
+import { ReadComponent } from '@components/read/read.component';
+import { CreateComponent } from '@components/create/create.component';
 
 const routes: Routes = [
   {
@@ -20,8 +21,12 @@ const routes: Routes = [
     component: PokecardComponent,
   },
   {
-    path: 'redux',
-    component: PokeReduxComponent,
+    path: 'read',
+    component: ReadComponent,
+  },
+  {
+    path: 'create',
+    component: CreateComponent,
   }
 ]
 

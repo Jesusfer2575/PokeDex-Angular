@@ -15,7 +15,6 @@ export const initialState = {
 }
 
 export function reducer(state: appState = initialState, action: Action) { 
-  console.log(action);
   switch(action.type) {
     case TYPES.SPANISH:
       return {

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>List of Pokemongs</h2>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li *ngFor="let pokemong of pokemongs$ | async">
+          <a [href]="pokemong.url" target="_blank">{{ pokemong.name }}</a>
+          <button type="button" class="btn btn-danger" (click)=removePokemong(pokemong.name)>Remove</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
